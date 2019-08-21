@@ -1,3 +1,4 @@
+import { OrderService } from './order/order.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -49,7 +50,7 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
     FormsModule,
     RouterModule.forRoot(ROUTES),
   ],
-  providers: [RestaurantsService, ShoppingCartService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [RestaurantsService, ShoppingCartService, OrderService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
